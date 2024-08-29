@@ -1,0 +1,94 @@
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(57, 143, 201, 0.87);
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+   
+.lista_menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 49px;
+    display: block; 
+    
+}
+
+.botao_cadastro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    top: 20px;
+    display: flex;
+    gap: 10px; 
+  
+}
+
+
+#logo{
+    width: 205px;
+    height: 205px;
+}
+
+#botao{
+    background-color: rgb(255, 255, 255);
+    color: rgb(16, 127, 218);
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top:50%;
+    left:120%;
+    
+    
+}
+#botao:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.cadastro{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 400px;
+     width: 400px;
+     top: 25%;
+     left: 60%;
+     position: absolute;
+     background-color: #2a84ce83;
+     border-radius: 10px;
+     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+     padding: 20px;
+    }
+    
+
+
+body{
+    display: flex;
+    background-image: url(fundo_login.gif);
+    background-size: cover;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+

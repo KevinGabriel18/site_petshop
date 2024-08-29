@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html"><img id="logo" src="logopet.png" alt="logo"></a>
+        <ul class="lista_menu">
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+        </ul>
+    </nav>
+
+    <div class="botao_cadastro">
+        <a href="login.html"><button id="botao">Entrar</button></a>
+        <a href="cadastro.html"><button id="botao">Cadastrar</button></a>
+    </div>    
+
+    <section id="carrinho">
+        <h2 class="titulo">Seu Carrinho</h2>
+        <div class="carrinho_container">
+            <div class="item_carrinho">
+                <img class="item_imagem" src="https://www.pngitem.com/pimgs/m/772-7720817_banho-e-tosa-png-3-png-image.png" alt="Produto">
+                <div class="item_info">
+                    <h3>Banho e Tosa</h3>
+                    <p>R$ 45,00</p>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" value="1" min="1">
+                </div>
+                <div class="item_total">
+                    <p>R$ 45,00</p>
+                    <button>Remover</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="resumo_carrinho">
+            <h3>Total</h3>
+            <p id="total">R$ 45,00</p>
+            <button id="finalizar">Finalizar Compra</button>
+        </div>
+    </section>
+</body>
+</html>

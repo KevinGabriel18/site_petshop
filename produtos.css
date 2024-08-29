@@ -1,0 +1,136 @@
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(57, 143, 201, 0.87);
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+   
+.lista_menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 49px;
+    display: block; 
+    
+}
+
+.botao_cadastro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    top: 20px;
+    display: flex;
+    gap: 10px; 
+  
+}
+
+
+#logo{
+    width: 205px;
+    height: 205px;
+}
+
+#botao{
+    background-color: rgb(255, 255, 255);
+    color: rgb(16, 127, 218);
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top:50%;
+    left:120%;
+}
+
+#botao:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.titulo{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#produtos{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+   
+    }
+
+/*.container_produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 350px;
+}
+
+.info_produtos{
+    display: flex;  
+    flex-direction: column;
+    align-items: center; 
+    padding: 0px;
+}*/
+
+.produtos_container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+    padding: 30 20px; 
+}
+
+.container_produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 350px;
+    overflow: hidden; 
+}
+
+.info_produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container_produtos #img{
+
+    width: auto;  
+    height: 150px;
+    margin: 25px;
+    object-fit: cover;
+}
+
+
+#cestaa{
+    width: auto;
+    height: 100px;
+
+}

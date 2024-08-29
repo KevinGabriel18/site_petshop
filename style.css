@@ -1,0 +1,181 @@
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(57, 143, 201, 0.87);
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+   
+.lista_menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 49px;
+    display: block; 
+    
+}
+
+.botao_cadastro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    top: 20px;
+    display: flex;
+    gap: 10px; 
+  
+}
+
+
+#logo{
+    width: 205px;
+    height: 205px;
+}
+
+#botao{
+    background-color: rgb(255, 255, 255);
+    color: rgb(16, 127, 218);
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top:50%;
+    left:120%;
+    
+    
+}
+#botao:hover {
+    background-color: rgb(230, 230, 230);
+    transform: scale(1.1);
+}
+
+#banner{
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: 100px auto;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    padding: 50px 0; 
+    width: 100%; 
+}
+
+#vermais{
+    color: rgb(16, 127, 218);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-left: 700px;
+}
+
+#sobre-nos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+  
+    
+}
+
+.titulo-produtos{
+    display: block;
+   
+}
+
+.container_produtos{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 800px;
+    height: 150px;
+    gap: 190px;
+
+
+}
+
+.container_produtos #img{
+
+    width: 25%;  
+    height: auto; 
+    margin: 10px;
+    
+}
+
+
+.container-sobre-nos{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: #59a2e25c;
+    width: 600px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+#contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: #92afdd41;
+    width: 100%;
+    
+}
+
+
+
+#toggle-banner:not(:checked) + label img {
+    content: url('bannerpet.png');
+}
+
+
+#toggle-banner:checked + label img {
+    content: url('bannerpet2.png');
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    background-color: rgba(57, 143, 201, 0.87);
+    width: 100%;
+    height: 150px;
+
+}
+
+footer p{
+    margin: 0 10px;
+}
