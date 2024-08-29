@@ -55,6 +55,7 @@ ul{
 
 #botao:hover {
     background-color: rgb(230, 230, 230);
+    transform: scale(1.1);
 }
 
 .titulo{
