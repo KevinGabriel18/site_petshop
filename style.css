@@ -28,7 +28,6 @@ ul{
 
 .botao_cadastro {
     position: fixed;
-    bottom: 20px;
     right: 20px; 
     top: 20px;
     display: flex;
@@ -49,8 +48,7 @@ ul{
     text-align: center;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    top:50%;
-    left:120%;
+    
     
     
 }
@@ -86,7 +84,10 @@ html{
     text-decoration: underline;
     cursor: pointer;
     margin-bottom: 0px;
-    margin-left: 700px;
+    text-align: right;
+    width: 100%;
+    padding-right:700px;
+   
 }
 
 #sobre-nos{

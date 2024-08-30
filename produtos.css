@@ -10,6 +10,7 @@
     left: 0;
     height: 60px;
     padding: 0;
+    
 }
 
 ul{
@@ -28,7 +29,6 @@ ul{
 
 .botao_cadastro {
     position: fixed;
-    bottom: 20px;
     right: 20px; 
     top: 20px;
     display: flex;
@@ -133,5 +133,8 @@ ul{
 #cestaa{
     width: auto;
     height: 100px;
-
+    object-fit: cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
