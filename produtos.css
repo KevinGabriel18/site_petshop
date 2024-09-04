@@ -138,3 +138,79 @@ ul{
     position: relative;
     flex-direction: column;
 }
+
+#cesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -28px;
+    margin-left: 800px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #logo{
+        width: 150px;
+        height: auto;
+        margin-left: -100px;
+        margin-top: 15px;
+
+    }
+
+    .botao_cadastro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -14px;
+
+    }
+
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(57, 143, 201, 0.87);
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 60px;
+        padding: 0;
+        flex: 1;
+        
+    }
+    
+    ul{
+        display: none;
+        display: flex;
+        padding: -50px 0px;
+       margin-left: -35px;
+
+        align-items: center;
+    }
+       
+    .lista_menu li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        
+    }
+    
+    .botao_cadastro {
+        position: fixed;
+        right: 20px; 
+        top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+    
+    #cesta{
+        display: flex;
+        margin-top: 30px;
+        margin-left: 320px;
+    
+    }
+}

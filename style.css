@@ -158,12 +158,12 @@ html{
 
 
 #toggle-banner:not(:checked) + label img {
-    content: url('bannerpet.png');
+    content: url('assets/img/bannerpet.png');
 }
 
 
 #toggle-banner:checked + label img {
-    content: url('bannerpet2.png');
+    content: url('assets/img/bannerpet2.png');
 }
 
 footer{
@@ -179,4 +179,147 @@ footer{
 
 footer p{
     margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #logo{
+        width: 150px;
+        height: auto;
+        margin-left: -100px;
+        margin-top: 15px;
+
+    }
+
+    .botao_cadastro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -14px;
+
+    }
+
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(57, 143, 201, 0.87);
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 60px;
+        padding: 0;
+        flex: 1;
+        
+    }
+    
+    ul{
+        display: none;
+        display: flex;
+        padding: -50px 0px;
+       margin-left: -35px;
+
+        align-items: center;
+    }
+       
+    .lista_menu li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        
+    }
+    
+    .botao_cadastro {
+        position: fixed;
+        right: 20px; 
+        top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    #produtos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #f4f4f4;
+        padding: 50px 0; 
+        width: 100%; 
+    }
+
+    #vermais{
+
+        color: rgb(16, 127, 218);
+        text-decoration: underline;
+        cursor: pointer;
+        margin-bottom: 0px;
+        text-align: right;
+        width: 100%;
+        padding-right: 180px;
+
+    }
+
+    .container_produtos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 250px;
+        height: 350px;
+        gap: 50px;
+
+
+    }
+
+
+
+    .container_produtos #img{
+        width: 150px;
+        height: auto;
+        margin-left: 45px;
+        margin-top: -60px;
+    }
+
+
+    .info_produtos{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin: -50px 0;
+        }
+
+
+
+    .container-sobre-nos{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: #59a2e25c;
+        width: 450px;
+        height: 190px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    }
+
+    #contato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0;
+        background-color: #92afdd41;
+        width: 100%;
+        
+    }
+    
 }
