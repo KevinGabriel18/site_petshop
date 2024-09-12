@@ -121,7 +121,7 @@ ul{
     padding: 10px;
 }
 
-.container_produtos #img{
+.container_produtos #imgg{
 
     width: auto;  
     height: 150px;
@@ -146,6 +146,7 @@ ul{
     justify-content: center;
     margin-top: -28px;
     margin-left: 800px;
+    position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -217,12 +218,12 @@ ul{
 
     .produtos_container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .container_produtos {
-        width: 100px;
-        height: 250px;
+        width: 130px;
+        height: 260px;
         flex-direction: column;
     justify-content: space-between;
     padding: 10px;
