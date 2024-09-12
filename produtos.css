@@ -153,7 +153,7 @@ ul{
     #logo{
         width: 150px;
         height: auto;
-        margin-left: -100px;
+        margin-left: -80px;
         margin-top: 15px;
 
     }
@@ -177,16 +177,15 @@ ul{
         top: 0;
         left: 0;
         height: 60px;
-        padding: 0;
-        flex: 1;
+    
         
     }
     
     ul{
         display: none;
         display: flex;
-        padding: -50px 0px;
-       margin-left: -35px;
+        padding: -10px 0px;
+       margin-left: -55px;
 
         align-items: center;
     }
@@ -199,18 +198,52 @@ ul{
         
     }
     
-    .botao_cadastro {
-        position: fixed;
-        right: 20px; 
-        top: 20px;
-        display: flex;
-        gap: 10px;
-    }
-    
     #cesta{
         display: flex;
         margin-top: 30px;
-        margin-left: 320px;
+        margin-left: 300px;
+       
     
     }
+
+    #produtos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0px;
+       
+        }
+
+    .produtos_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container_produtos {
+        width: 100px;
+        height: 250px;
+        flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: hidden;
+    }
+
+    .info_produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        height: 200%;
+        margin: -10px;
+    }
+
+    #imgg{
+        max-width: 95%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+
 }
