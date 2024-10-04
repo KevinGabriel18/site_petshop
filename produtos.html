@@ -5,126 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetShow</title>
     <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <nav class="menu">
-        <a href="index.html"><img id="logo" src="logopet.png" alt="logo"></a>
-        <ul class="lista_menu">
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#sobre-nos">Sobre nós</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-       
-      </nav>
+    <header>
+        <nav id="navbar">
+            <a href="index.html"><img id="nav_logo" src="logopet.png" alt="logo"></a>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a href="#sobre-nos">Sobre nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <a class="butao-cont" href="login.html"><button class="btn-default">Login</button></a>
+            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item active"><a href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a href="#sobre-nos">Sobre nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <a class="butao-cont" href="login.html"><button class="btn-default">Login</button></a>
+        </div>
+    </header>
+    <script src="navbar.js"></script>
       <a id="cesta" href="carrinho.html"><img id="cestaa" src="cesta.png"></a>
-      
-      <div class="botao_cadastro">
-        <a href="login.html"><button id="botao">Entrar</button></a>
-        <a href="cadastro.html"><button id="botao">Cadastrar</button></a>
-      </div>    
-
-     
 
 
       <section id="produtos">
         <h2 class="titulo">Produtos</h2>
         <div class="produtos_container">
             <div class="container_produtos">
-                <img id="img" src="https://www.pngitem.com/pimgs/m/772-7720817_banho-e-tosa-png-3-png-image.png" alt="">
+                <img class="imgg" src="https://www.pngitem.com/pimgs/m/772-7720817_banho-e-tosa-png-3-png-image.png" alt="">
                 <div class="info_produtos">
-                    <h3>Banho e Tosa</h3>
+                    <h3 class="nome">Banho e Tosa</h3>
                     <p>R$ 45,00</p>
-                    <button>Solicitar</button>
+                    <button onclick="selectProduct('Produto 1')">Solicitar</button>
                 </div>
             </div>
             
             <div class="container_produtos">
-                <img id="imgg" src="https://cdn.awsli.com.br/2500x2500/1226/1226108/produto/55648228/04f1bcd44a.jpg" alt="">
+                <img class="imgg" src="https://cdn.awsli.com.br/2500x2500/1226/1226108/produto/55648228/04f1bcd44a.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Casinha</h3>
-                    <p>R$ 250,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Casinha</h3>
+                    <p class="preco">R$ 250,00</p>
+                    <button onclick="selectProduct('Produto 2')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://images.tcdn.com.br/img/img_prod/573283/kit_para_banho_caes_filhotes_shampoo_condicionador_e_perfume_baby_cachorro_filhote_sanol_536825_1_8a3adef49c3ea7cc540cb1bcd1ab9e6a.jpg" alt="">
+                <img class="imgg" src="https://images.tcdn.com.br/img/img_prod/573283/kit_para_banho_caes_filhotes_shampoo_condicionador_e_perfume_baby_cachorro_filhote_sanol_536825_1_8a3adef49c3ea7cc540cb1bcd1ab9e6a.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Kit Shampoo</h3>
-                    <p>R$ 60,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Kit Shampoo</h3>
+                    <p class="preco">R$ 60,00</p>
+                    <button onclick="selectProduct('Produto 3')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://www.galaxcommerce.com.br/sistema/upload/4116/produtos/escova-pet-rasqueadeira-pet-tira-pelos-pra-cachorro-e-gatos-cerdas-macias-com-botao_2023-10-29_17-25-43_0_83.JPG" alt="">
+                <img class="imgg" src="https://www.galaxcommerce.com.br/sistema/upload/4116/produtos/escova-pet-rasqueadeira-pet-tira-pelos-pra-cachorro-e-gatos-cerdas-macias-com-botao_2023-10-29_17-25-43_0_83.JPG" alt="">
                 <div class="info_produtos">
-                    <h3>Escova Pet</h3>
-                    <p>R$ 15,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Escova Pet</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button onclick="selectProduct('Produto 4')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://imgs.casasbahia.com.br/1523140742/1xg.jpg" alt="">
+                <img class="imgg" src="https://imgs.casasbahia.com.br/1523140742/1xg.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Ração Gold 10kg</h3>
-                    <p>R$ 185,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração Gold 10kg</h3>
+                    <p class="preco">R$ 185,00</p>
+                    <button onclick="selectProduct('Produto 5')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://cdn.awsli.com.br/600x700/1095/1095221/produto/40384673/2e21a5d78a.jpg" alt="">
+                <img class="imgg" src="https://cdn.awsli.com.br/600x700/1095/1095221/produto/40384673/2e21a5d78a.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Ração Pedgree 10kg</h3>
-                    <p>R$ 210,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração Pedgree 10kg</h3>
+                    <p class="preco">R$ 210,00</p>
+                    <button onclick="selectProduct('Produto 6')">Solicitar</button>
                 </div>
             </div>
             
             <div class="container_produtos">
-                <img id="imgg" src="https://www.petlove.com.br/images/products/258569/product/RAOWHI_4.JPG?1658246240" alt="">
+                <img class="imgg" src="https://www.petlove.com.br/images/products/258569/product/RAOWHI_4.JPG?1658246240" alt="">
                 <div class="info_produtos">
-                    <h3>Ração de gato Whiskas</h3>
-                    <p>R$ 150,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração de gato Whiskas</h3>
+                    <p class="preco">R$ 150,00</p>
+                    <button onclick="selectProduct('Produto 7')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://www.galaxcommerce.com.br/sistema/upload/4116/produtos/escova-pet-rasqueadeira-pet-tira-pelos-pra-cachorro-e-gatos-cerdas-macias-com-botao_2023-10-29_17-25-43_0_83.JPG" alt="">
+                <img class="imgg" src="https://www.galaxcommerce.com.br/sistema/upload/4116/produtos/escova-pet-rasqueadeira-pet-tira-pelos-pra-cachorro-e-gatos-cerdas-macias-com-botao_2023-10-29_17-25-43_0_83.JPG" alt="">
                 <div class="info_produtos">
-                    <h3>Escova Pet</h3>
-                    <p>R$ 15,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Escova Pet</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button onclick="selectProduct('Produto 8')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://imgs.casasbahia.com.br/1523140742/1xg.jpg" alt="">
+                <img class="imgg" src="https://imgs.casasbahia.com.br/1523140742/1xg.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Ração Gold 10kg</h3>
-                    <p>R$ 185,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração Gold 10kg</h3>
+                    <p class="preco">R$ 185,00</p>
+                    <button onclick="selectProduct('Produto 9')">Solicitar</button>
                 </div>
             </div>
 
             <div class="container_produtos">
-                <img id="imgg" src="https://cdn.awsli.com.br/600x700/1095/1095221/produto/40384673/2e21a5d78a.jpg" alt="">
+                <img class="imgg" src="https://cdn.awsli.com.br/600x700/1095/1095221/produto/40384673/2e21a5d78a.jpg" alt="">
                 <div class="info_produtos">
-                    <h3>Ração Pedgree 10kg</h3>
-                    <p>R$ 210,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração Pedgree 10kg</h3>
+                    <p class="preco">R$ 210,00</p>
+                    <button onclick="selectProduct('Produto 10')">Solicitar</button>
                 </div>
             </div>
             
             <div class="container_produtos">
-                <img id="imgg" src="https://www.petlove.com.br/images/products/258569/product/RAOWHI_4.JPG?1658246240" alt="">
+                <img class="imgg" src="https://www.petlove.com.br/images/products/258569/product/RAOWHI_4.JPG?1658246240" alt="">
                 <div class="info_produtos">
-                    <h3>Ração de gato Whiskas</h3>
-                    <p>R$ 150,00</p>
-                    <button>Comprar</button>
+                    <h3 class="nome">Ração de gato Whiskas</h3>
+                    <p class="preco">R$ 150,00</p>
+                    <button onclick="selectProduct('Produto 11')">Solicitar</button>
                 </div>
             </div>
 
@@ -133,7 +145,7 @@
         </div>
     </section>
     
-
+<script src="produto.js"></script>
 
 </body>
 </html>

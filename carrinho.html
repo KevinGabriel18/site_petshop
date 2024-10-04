@@ -6,42 +6,57 @@
     <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="carrinho.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <nav class="menu">
-        <a href="index.html"><img id="logo" src="logopet.png" alt="logo"></a>
-        <ul class="lista_menu">
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#sobre-nos">Sobre nós</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav id="navbar">
+            <a href="index.html"><img id="nav_logo" src="logopet.png" alt="logo"></a>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a href="#sobre-nos">Sobre nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <a class="butao-cont" href="login.html"><button class="btn-default">Login</button></a>
+            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item active"><a href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a href="#sobre-nos">Sobre nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <a class="butao-cont" href="login.html"><button class="btn-default">Login</button></a>
+        </div>
+    </header>
+    <script src="navbar.js"></script>
 
-    <div class="botao_cadastro">
-        <a href="login.html"><button id="botao">Entrar</button></a>
-        <a href="cadastro.html"><button id="botao">Cadastrar</button></a>
-    </div>    
-
+    
     <section id="carrinho">
         <h2 class="titulo">Seu Carrinho</h2>
         <div class="carrinho_container">
             <div class="itens_e_cesta">
                 
                 <div class="item_carrinho">
-                    <img class="item_imagem" src="https://www.pngitem.com/pimgs/m/772-7720817_banho-e-tosa-png-3-png-image.png" alt="Produto">
+                    <img class="item_imagem" src="" alt="Produto">
                     <div class="item_info">
-                        <h3>Banho e Tosa</h3>
-                        <p>R$ 45,00</p>
+                        <h3 id="item_titulo"></h3>
+                        <p class="item_preco"></p>
                         <label for="quantidade">Quantidade:</label>
                         <input type="number" id="quantidade" name="quantidade" value="1" min="1">
                     </div>
                     <div class="item_total">
-                        <p>R$ 45,00</p>
+                        <p id="sub-total"></p>
                         <i class="fa-solid fa-trash"></i>
                     </div>
-                </div>
                 
-                <div class="cesta">
+                <div id="cesta">
                     <div class="resumo_carrinho">
                         <h3 id="recibo">Recibo de Compra</h3>
                         <p id="det">Subtotal: R$ 45,00</p>
@@ -51,7 +66,7 @@
                         <hr>
                         <button id="finalizar">Finalizar Compra</button>
                     </div>
-                    <div class="calcular_frete">
+                    <div id="calcular_frete">
                         <h3>Calcular Frete</h3>
                         <label for="cepInput">Digite o CEP:</label>
                         <input type="text" id="cepInput">
@@ -65,25 +80,7 @@
         </div>
     </section>
     
-<script>
-        function buscarEndereco() {
-            var cep = document.getElementById('cepInput').value;
-            var url = `https://viacep.com.br/ws/${cep}/json/`;
-            
-            fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                if(data.erro) {
-                    document.getElementById('endereco').innerText = "CEP não encontrado.";
-                } else {
-                    var endereco = `CEP: ${data.cep}, ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
-                    document.getElementById('endereco').innerText = endereco;
-                }
-            })
-            .catch(error => console.error('Erro:', error));
-        }
-    </script>
-
-   
+   <script src="buscarEndereco.js"></script>
+   <script src="carrinho.js"></script>
 </body>
 </html>

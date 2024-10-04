@@ -1,60 +1,105 @@
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(57, 143, 201, 0.87);
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 60px;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 
-ul{
-    display: flex;
-    list-style-type: none;
-    text-align: center;
+header {
+    width: 100%;
+    padding: 1px 8%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(57, 143, 201, 0.87);
+    z-index: 3;
 }
-   
-.lista_menu li a {
-    color: rgb(255, 255, 255);
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav_logo{
+    width: 100px;
+    height: auto;
+}
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+.nav-item a {
     text-decoration: none;
-    padding: 49px;
-    display: block; 
-    
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+.nav-item.active a {
+    color: rgb(0, 0, 0);
 }
 
-.botao_cadastro {
-    position: fixed;
-    right: 20px; 
-    top: 20px;
-    display: flex;
-    gap: 10px; 
-  
-}
-
-
-#logo{
-    width: 205px;
-    height: 205px;
-}
-
-#botao{
-    background-color: rgb(255, 255, 255);
-    color: rgb(16, 127, 218);
-    border-radius: 10px;
-    text-align: center;
+.btn-default{
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 10px 14px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     
 }
-#botao:hover {
-    background-color: rgb(230, 230, 230);
-    transform: scale(1.1);
+
+.btn-default:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#mobile_btn {
+    display: none;
+}
+#mobile_menu {
+    display: none;
+}
+
+.butao-cont{
+    list-style: none;
+    text-decoration: none;
+
+
+}
+@media screen and (max-width: 768px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+    .butao-cont{
+        list-style: none;
+    }
 }
 
 #banner{
@@ -63,10 +108,6 @@ ul{
     height: auto;
     margin: 100px auto;
 
-}
-
-html{
-    scroll-behavior: smooth;
 }
 
 #produtos{
