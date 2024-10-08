@@ -38,49 +38,51 @@
     <script src="navbar.js"></script>
 
     
-    <section id="carrinho">
-        <h2 class="titulo">Seu Carrinho</h2>
-        <div class="carrinho_container">
-            <div class="itens_e_cesta">
-                
-                <div class="item_carrinho">
-                    <img class="item_imagem" src="" alt="Produto">
-                    <div class="item_info">
-                        <h3 id="item_titulo"></h3>
-                        <p class="item_preco"></p>
-                        <label for="quantidade">Quantidade:</label>
-                        <input type="number" id="quantidade" name="quantidade" value="1" min="1">
-                    </div>
-                    <div class="item_total">
-                        <p id="sub-total"></p>
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
-                
-                <div id="cesta">
-                    <div class="resumo_carrinho">
-                        <h3 id="recibo">Recibo de Compra</h3>
-                        <p id="det">Subtotal: R$ 45,00</p>
-                        <p id="det">Desconto: R$ 0,00</p>
-                        <p id="det">Frete: R$ 0,00</p>
-                        <p id="det">Total: R$ 45,00</p>
-                        <hr>
-                        <button id="finalizar">Finalizar Compra</button>
-                    </div>
-                    <div id="calcular_frete">
-                        <h3>Calcular Frete</h3>
-                        <label for="cepInput">Digite o CEP:</label>
-                        <input type="text" id="cepInput">
-                        <button onclick="buscarEndereco()">Buscar</button>
-                        <div id="endereco"></div>
-                    </div>
-                </div>
+    <div class="agrupar">
 
-                
+        <div class="cont-produto">
+            <h2 id="titulo_compra">Suas Compras</h2>
+
+<div id="add"></div>
+<div id="add"></div>
+
+      
+
+        </div>
+
+    <section class="cesta">
+        <div class="card-compra">
+            <div class="card-comprainfo">
+                <h3 id="titulo_carrinho">Recibo Da compra</h3>
+                <p id="Subtotal"></p>
+                <p id="Frete"></p>
+                <p id="Total"></p>
+                <hr>
+                <button class="finalizar-compra">Finalizar pedido</button>
             </div>
         </div>
-    </section>
+
+        <div class="buscarcep">
+            <hr>
+            <br>
+            <label for="cepInput">Digite o CEP:</label>
+            <input type="text" id="cepInput">
+            <button onclick="buscarEndereco()">Buscar</button> <br>
+            
+        </div>
+        <div class="resultado">
+             <p id="endereco"></p>
+        </div>
+       
+            <script src="cep.js"></script>
+</section>
+    </div>
     
-   <script src="buscarEndereco.js"></script>
-   <script src="carrinho.js"></script>
+    <footer>
+        <p>&copy; 2023 PetShow. Todos os direitos reservados.</p><br>
+        <p>Desenvolvido por: Kevin Gabriel</p><br>
+        <p>Contato: (75) 98233-3027</p>
+      </footer>
+      <script src="passar-produto.js"></script>
 </body>
 </html>

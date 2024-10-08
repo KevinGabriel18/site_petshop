@@ -141,12 +141,7 @@ header {
     
 }
 
-.titulo-produtos{
-    display: block;
-   
-}
-
-.container_produtos{
+.prod{
     display: flex;
     background-color: white;
     border-radius: 10px;
@@ -155,11 +150,8 @@ header {
     width: 800px;
     height: 150px;
     gap: 190px;
-
-
 }
-
-.container_produtos #img{
+.prod .imagprod{
 
     width: 25%;  
     height: auto; 
@@ -167,6 +159,10 @@ header {
     
 }
 
+.titulo-produtos{
+    display: block;
+   
+}
 
 .container-sobre-nos{
     display: flex;
@@ -207,6 +203,40 @@ header {
     content: url('bannerpet2.png');
 }
 
+.adc-butao {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(93, 173, 226);
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+
+
+.container-prod{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-prod h3 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.container-prod a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
+}
+
 footer{
     display: flex;
     justify-content: center;
@@ -242,37 +272,6 @@ footer p{
     }
 
 
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(57, 143, 201, 0.87);
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 60px;
-    
-        
-    }
-    
-    ul{
-        display: none;
-        display: flex;
-        padding: -10px 0px;
-       margin-left: -55px;
-
-        align-items: center;
-    }
-       
-    .lista_menu li a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        padding: 10px;
-        display: flex;
-        
-    }
-    
-
     #produtos{
         display: flex;
         flex-direction: column;
@@ -295,7 +294,7 @@ footer p{
 
     }
 
-    .container_produtos{
+    .prod{
         display: flex;
         
         flex-direction: column;
@@ -312,22 +311,51 @@ footer p{
 
 
 
-    .container_produtos #img{
+    .prod .imagprod{
         width: 150px;
         height: auto;
         margin-left: 45px;
-        margin-top: -60px;
+        margin-top: 30px;
     }
 
-
-    .info_produtos{
+    .container-prod{
         display: flex;
-        flex-direction: column;
-        align-items: center; 
-        margin: -50px 0;
-        }
+        flex: 1;
+        text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .container-prod h3 {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+        color: #333;
+    }
+    
+    .container-prod a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .adc-butao {
+        width: 80px;
+        height: 30px;
+        background-color: rgb(93, 173, 226);
+        text-decoration: none;
+        border-radius: 20px;
+       
+        text-align: center;
+    }
 
-
+    #sobre-nos{
+        display: flex;
+        margin: auto;
+        width: 90%;
+    }
 
     .container-sobre-nos{
         display: flex;
@@ -338,7 +366,7 @@ footer p{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 20px;
         background-color: #59a2e25c;
-        width: 450px;
+        width: 300px;
         height: 190px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -354,6 +382,45 @@ footer p{
         background-color: #92afdd41;
         width: 100%;
         
+    }
+
+    #contato label{
+        font-size: 20px;
+    }
+
+    #contato input{
+        width: 300px;
+        height: 30px;
+        border-radius: 20px;
+        margin: 10px 0;
+        padding: 0 10px;
+        font-size: 16px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    #contato textarea{
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+        margin: auto;
+        display: flex;
+    }
+
+    #contato #botao-enviar{
+        width: 100px;
+        height: 30px;
+        background-color: rgb(93, 173, 226);
+        border-radius: 20px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+       border: none;
     }
     
     .footer{

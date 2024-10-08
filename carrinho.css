@@ -103,129 +103,221 @@ header {
     }
 }
 
-.titulo {
-    text-align: center;
-    margin-top: 80px;
+.agrupar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 95%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+   
+   
 }
-
-#carrinho {
-    margin: 0px auto;
+.cont-produto{
+    width: 90%;
+  
     
 }
 
-.carrinho_container {
-    display: flex;
-    flex-direction: column;
+.card-compra {
+    width: 30%;
 }
 
-.itens_e_cesta {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start; 
-    
+.agrupar h2{
+    color: #333;
 }
 
-.item_carrinho {
+.card-item {
     display: flex;
     align-items: center;
     background-color: #fff;
-    width: 90%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px 0;
 
+    
 }
 
-.item_imagem {
-    width: 100px;
+
+.card-item img {
+    width: 120px;
     height: auto;
-    object-fit: cover;
     margin-right: 20px;
 }
-
-.item_info {
+.info {
+    
     flex: 1;
-}
-
-.item_total {
-    text-align: right;
-}
-
-#quantidade {
-    width: 60px;
-}
-
-#cesta {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border: 5px solid rgb(134, 187, 229);
-    border-radius: 10px;
-    padding: 0px; 
-    width: 350px; 
-    height: 320px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
 
-.resumo_carrinho {
-    text-align: right;
+.info p {
+    margin: 5px 0;
 }
 
-#finalizar {
+
+
+#titulo_carrinho {
+    text-align: center; font-size: 20px; color: rgb(93, 173, 226);
+
+}
+
+.quantidade {
     display: flex;
-    background-color: rgb(16, 127, 218);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    justify-content: center;
-    margin:20px 100px;
-}
-
-#finalizar:hover {
-    background-color: rgb(14, 105, 184);
-}
-
-#recibo {
-    
-    text-align: center;
+    align-items: center;
     margin-top: 10px;
+}
+
+.quantidade button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.quantidade input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 0 5px;
+}
+.quantidade input:focus{
+    color: #28a745;
+}
+.preço {
+    color: #28a745;
+    font-weight: bold;
+}
+.remove {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    color: #000000;
+}
+.card-comprainfo {
+    margin-left: 24px;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fefefe;
+    width: 300px;
+}
+.finalizar-compra{
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
 }
 
-#det {
-    display: flex;
-    height: 20px;
-    text-align: left;
+.finalizar-compra:hover {
+    background-color: #145a23;
 }
 
-.calcular_frete {
+.cesta{
     display: flex;
     flex-direction: column;
-   
-    gap: 10px;
-    margin-top: 20px;
+}
+.buscarcep{
+    transform: translateX(12px);
+    background-color: #fefefe;
+    
+}
+.resultado{
+    margin: 0 auto;
+    width: 350px;
+}
+.resultado p{
+    color: rgb(61, 118, 204);
+    
+}
+.buscarcep button{
+    color: white;
+    background-color: rgb(93, 173, 226);
+    border-radius: 10px;
+}
+.buscarcep input{
+    border-radius: 10px;
+    border: 1px solid rgb(93, 173, 226);
+}
+.buscarcep label{
+    color: rgb(93, 173, 226);
+    font-size: large;
 }
 
-@media screen and (max-width: 768px) {
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    background-color: rgba(57, 143, 201, 0.87);
+    width: 100%;
+    height: 150px;
 
-    
+}
 
-    .cesta {
+footer p{
+    margin: 0 10px;
+}
+
+@media only screen and (max-width:768px){
+    .agrupar {
         display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        margin-bottom: 300px;
+
+    } 
+    .cesta{
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
         flex-direction: column;
-        margin-top: 180px;
-        margin-left: -270px;
-        width: 100%; 
-        height: auto;
-        
+    }
+    .buscarcep h1{
+        display:none;
+    }
+    .buscarcep{
+        padding: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .card-comprainfo {
+        border: 0px;
+        margin: auto;
+    }
+    .buscarcep hr{
+        display: none;
+    }
+    .buscarcep input{
+        width:100px;
+        border-radius: 10px;
+        border: 1px solid rgb(93, 173, 226);
+    }
+    .buscarcep label{
+        color: rgb(93, 173, 226);
+        font-size: large;
+    }
+    .cont-produto{
+        padding: 50px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: auto;
+        padding: 20px;
+    }
+    .card-item {
+      margin:auto;
     }
 
-    #finalizar {
-        width: 150px;
-        margin-left: 75px;
+    .footer{
+        width: 100%;
+        position: relative;
+
     }
-    
 }
