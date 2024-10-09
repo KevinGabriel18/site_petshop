@@ -2,8 +2,8 @@ function selecionarprod(produto) {
     const ElementPrice = document.getElementsByClassName(`preco-${produto}`);
     const ElementName = document.getElementById(`info-${produto}`);
 
-    
-    let productPrice = parseFloat(ElementPrice[0].innerText.replace("R$", "").replace(",",".").trim())
+
+    let productPrice = parseFloat(ElementPrice[0].innerText.replace("R$", "").replace(",", ".").trim())
     let productDetalhes = ElementName.innerText.trim();
 
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -17,9 +17,9 @@ function selecionarprod(produto) {
 
     let produtoExistente = carrinho.find(item => item.id === produto);
     if (produtoExistente) {
-        produtoExistente.quantidade += 1; 
+        produtoExistente.quantidade += 1;
     } else {
-        carrinho.push(novoProduto); 
+        carrinho.push(novoProduto);
     }
 
 
@@ -31,12 +31,12 @@ function selecionarprod(produto) {
 
 
 function carregarCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; 
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     const CSSboxRule = document.querySelector('.box');
     const CSSCardRule = document.querySelector('.prod');
     const CSSconteinerRule = document.querySelector('.container');
 
-   const prodimagens = {
+    const prodimagens = {
         'produto1': 'https://www.pngitem.com/pimgs/m/772-7720817_banho-e-tosa-png-3-png-image.png',
         'produto2': 'https://cdn.awsli.com.br/2500x2500/1226/1226108/produto/55648228/04f1bcd44a.jpg',
         'produto3': 'https://images.tcdn.com.br/img/img_prod/573283/kit_para_banho_caes_filhotes_shampoo_condicionador_e_perfume_baby_cachorro_filhote_sanol_536825_1_8a3adef49c3ea7cc540cb1bcd1ab9e6a.jpg',
@@ -51,8 +51,8 @@ function carregarCarrinho() {
     }
 
     let demoElement = document.getElementById("add");
-    
-    if(carrinho.length === 0){
+
+    if (carrinho.length === 0) {
         CSSCardRule.remove();
         CSSboxRule.remove();
 
@@ -62,9 +62,9 @@ function carregarCarrinho() {
 
 
         `;
-        
+
         CSSconteinerRule.style.color = 'red';
-       
+
     }
     carrinho.forEach(produto => {
         let cardProd = `
@@ -77,7 +77,7 @@ function carregarCarrinho() {
                     <input type="text" id="quantidade-${produto.id}" value="${produto.quantidade}" readonly>
                     <button onclick="alterarQuantidade('${produto.id}', 1)">+</button>
                 </div>
-                <p id="preco-${produto.id}"> R$: ${produto.preco.toLocaleString('pt-BR',{minimumFractionDigits: 2})}</p>
+                <p id="preco-${produto.id}"> R$: ${produto.preco.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
             </div>
             <button class="remove" onclick="removerProduto('${produto.id}')"><i class="fa-solid fa-trash"></i></button>
         </div>`;
@@ -93,27 +93,27 @@ function alterarQuantidade(produtoId, delta) {
     if (produto) {
         produto.quantidade += delta;
         if (produto.quantidade <= 0) {
-            removerProduto(produtoId); 
+            removerProduto(produtoId);
         } else {
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
             document.getElementById(`quantidade-${produtoId}`).value = produto.quantidade;
         }
     }
-    
+
     resumoCompras();
 }
 
-function resumoCompras(){
+function resumoCompras() {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     let frete = 25;
     let subtotal = 0
-    
-    carrinho.forEach( novoProduto =>{subtotal += novoProduto.preco * novoProduto.quantidade} ) ;
+
+    carrinho.forEach(novoProduto => { subtotal += novoProduto.preco * novoProduto.quantidade });
     let total = subtotal + frete;
 
-    document.getElementById('Subtotal').innerText = `Subtotal: R$${subtotal.toLocaleString('pt-BR',{minimumFractionDigits: 2})}`;
-    document.getElementById('Frete').innerText = `Frete: R$${frete.toLocaleString('pt-BR',{minimumFractionDigits: 2})}`;
-    document.getElementById('Total').innerText = `Total: R$${total.toLocaleString('pt-BR',{minimumFractionDigits: 2})}`;
+    document.getElementById('Subtotal').innerText = `Subtotal: R$${subtotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+    document.getElementById('Frete').innerText = `Frete: R$${frete.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+    document.getElementById('Total').innerText = `Total: R$${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
     console.log(subtotal);
 }
 
@@ -130,7 +130,7 @@ function removerProduto(produtoId) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () =>{
-carregarCarrinho();
-resumoCompras();
+document.addEventListener('DOMContentLoaded', () => {
+    carregarCarrinho();
+    resumoCompras();
 });
