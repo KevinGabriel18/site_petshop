@@ -102,14 +102,17 @@ header {
     }
 }
 
+#cadastroo{
+    display: flex;
+}
 
 .cadastro{
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
-     height: 400px;
-     width: 400px;
+     height: 370px;
+     width: 370px;
      top: 25%;
      left: 60%;
      position: absolute;
@@ -123,7 +126,7 @@ header {
 
 body{
     display: flex;
-    background-image: url(fundo_login.gif);
+    background-image: url(../img/fundo_login.gif);
     background-size: cover;
 }
 
@@ -139,53 +142,19 @@ form{
 
 @media screen and (max-width: 768px) {
 
-    #logo{
-        width: 150px;
-        height: auto;
-        margin-left: -80px;
-        margin-top: 15px;
-
-    }
-
-    .botao_cadastro{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: -14px;
-
-    }
-
-
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(57, 143, 201, 0.87);
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 60px;
-    
-        
-    }
-    
-    ul{
-        display: none;
-        display: flex;
-        padding: -10px 0px;
-       margin-left: -55px;
-
-        align-items: center;
-    }
-       
-    .lista_menu li a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        padding: 10px;
+    #cadastroo{
         display: flex;
         
     }
 
+   .cadastro{
+    display: flex;
+    margin-left: -225px;
+   }
 
+   body{
+    display: flex;
+    background-image: url(../img/fundo_login.gif);
+    background-size: cover;
+}
 }

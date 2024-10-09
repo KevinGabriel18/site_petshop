@@ -158,6 +158,10 @@ header {
         list-style: none;
     }
 }
+#loginn{
+    display: flex;
+    
+}
 
 .login{
      display: flex;
@@ -179,7 +183,7 @@ header {
 
 body{
     display: flex;
-    background-image: url(fundo_login.gif);
+    background-image: url(../img/fundo_login.gif);
     background-size: cover;
 }
 
@@ -203,44 +207,21 @@ form{
 
     }
 
-    .botao_cadastro{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: -14px;
-
-    }
-
-
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(57, 143, 201, 0.87);
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 60px;
-    
-        
-    }
-    
-    ul{
-        display: none;
-        display: flex;
-        padding: -10px 0px;
-       margin-left: -55px;
-
-        align-items: center;
-    }
-       
-    .lista_menu li a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        padding: 10px;
+    #loginn{
         display: flex;
         
     }
+
+   .login{
+    display: flex;
+    margin-left: -190px;
+   }
+
+   body{
+    display: flex;
+    background-image: url(../img/fundo_login.gif);
+    background-size: cover;
+}
+
 
 }
